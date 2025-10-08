@@ -1,0 +1,14 @@
+<% layout('layout') -%>
+<h1>Користувачі (demo)</h1>
+<% if (!users || users.length === 0) { %>
+  <p>Поки що користувачів немає.</p>
+<% } else { %>
+  <table class="table">
+    <thead><tr><th>#</th><th>Email</th></tr></thead>
+    <tbody>
+      <% users.forEach((u, i) => { %>
+        <tr><td><%= i+1 %></td><td><%= u.email %></td></tr>
+      <% }) %>
+    </tbody>
+  </table>
+<% } %>

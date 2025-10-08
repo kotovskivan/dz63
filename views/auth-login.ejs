@@ -1,0 +1,14 @@
+<% layout('layout') -%>
+<h1>Вхід</h1>
+<form method="post" action="/auth/login<%= (query && query.next) ? ('?next=' + encodeURIComponent(query.next)) : '' %>">
+  <div class="form-row">
+    <label>Email</label>
+    <input type="email" name="email" required />
+  </div>
+  <div class="form-row">
+    <label>Пароль</label>
+    <input type="password" name="password" required />
+  </div>
+  <button class="btn" type="submit">Увійти</button>
+</form>
+<p>Немає акаунту? <a href="/auth/register">Зареєструватися</a></p>

@@ -1,0 +1,15 @@
+:root { --bg:#ffffff; --text:#222; --muted:#666; --line:#e5e5ea; --primary:#6e56cf; --primary-2:#5b45c0; --notice:#f7f7fa; --success:#eafbea; --error:#fde8e8; }
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;color:var(--text);background:var(--bg)}
+.container{max-width:900px;margin:20px auto;padding:0 16px}
+.classy-header{border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:10}
+.classy-header__inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.classy-header__nav a,.classy-header__nav form.inline{margin-left:12px;display:inline-flex;align-items:center}
+.classy-header__link{text-decoration:none;color:#3b3b3b}.classy-header__link:hover{text-decoration:underline}
+.btn{display:inline-block;padding:8px 12px;border:1px solid #ddd;border-radius:8px;background:#fafafa;cursor:pointer;text-decoration:none;color:#222}.btn:hover{background:#f0f0f0}.btn-primary{background:var(--primary);color:#fff;border-color:transparent}.btn-primary:hover{background:var(--primary-2)}
+form .form-row{margin-bottom:12px;display:flex;flex-direction:column;max-width:420px}label{font-weight:600;margin-bottom:6px}input{padding:10px;border:1px solid #ccc;border-radius:8px;font-size:16px}
+.table{width:100%;border-collapse:collapse}.table th,.table td{border:1px solid var(--line);padding:8px;text-align:left}
+.tabs{display:flex;gap:8px;margin:10px 0 16px}.tab{padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:#fafafa;cursor:pointer}.tab.active{background:#fff;border-color:var(--primary);color:var(--primary);font-weight:600}
+.tab-panels .panel{display:none}.tab-panels .panel.active{display:block}
+.notice{background:var(--notice);border:1px solid var(--line);padding:10px 12px;border-radius:10px;margin:10px 0}.notice.success{background:var(--success)}.notice.error{background:var(--error)}
+footer{border-top:1px solid var(--line);padding:12px 0;margin-top:40px;font-size:14px;color:var(--muted)}

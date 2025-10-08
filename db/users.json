@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": "2M7kAsByDgvy2GyC4-ovC",
+      "email": "workkotovski@gmail.com",
+      "passwordHash": "$2a$10$kizvEEvG8n7guolX.G7yS.dBfb3ggqkNtl.uOHo3fWyMqA3ITvfMS"
+    },
+    {
+      "id": "Z2I3XoWR9cFrVcHdxeamM",
+      "email": "motobloki24@gmail.com",
+      "passwordHash": "$2a$10$Jb0ynO0NtGfGgjWnB99JguLC3sh8FD8OWCxsVe8r3862hYD8WfoZC"
+    }
+  ]
+}

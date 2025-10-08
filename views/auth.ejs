@@ -1,0 +1,28 @@
+<% layout('layout') -%>
+<h1>Авторизація</h1>
+<div class="tabs">
+  <button class="tab <%= tab === 'login' ? 'active' : '' %>" data-tab="login">Увійти</button>
+  <button class="tab <%= tab === 'register' ? 'active' : '' %>" data-tab="register">Зареєструватися</button>
+</div>
+<% if (registered) { %><div class="notice success">Реєстрація успішна. Увійдіть.</div><% } %>
+<% if (msg) { %><div class="notice"><%= msg %></div><% } %>
+<% if (error) { %><div class="notice error">Помилка. Перевірте дані.</div><% } %>
+<div class="tab-panels">
+  <div class="panel <%= tab === 'login' ? 'active' : '' %>" id="panel-login">
+    <form method="post" action="/auth/login" class="auth-form">
+      <input type="hidden" name="next" value="<%= next %>" />
+      <div class="form-row"><label>Email</label><input type="email" name="email" required /></div>
+      <div class="form-row"><label>Пароль</label><input type="password" name="password" required /></div>
+      <button class="btn btn-primary" type="submit">Увійти</button>
+    </form>
+  </div>
+  <div class="panel <%= tab === 'register' ? 'active' : '' %>" id="panel-register">
+    <form method="post" action="/auth/register" class="auth-form">
+      <input type="hidden" name="next" value="<%= next %>" />
+      <div class="form-row"><label>Email</label><input type="email" name="email" required /></div>
+      <div class="form-row"><label>Пароль</label><input type="password" name="password" required minlength="6" /></div>
+      <button class="btn btn-primary" type="submit">Створити акаунт</button>
+    </form>
+  </div>
+</div>
+<% extraScripts = '<script src="/js/auth.js"></script>' %>
